@@ -22,11 +22,11 @@ public class HourlyEmployee extends Employee implements Payable {
     // methods
     @Override
     public double calculatePay() {
-        return (hours / rate);
+        return (hours * rate);
     }
 
     @Override
     public String getPayDetails() {
-        return String.format("\n%s is paid $%.2f. (%.2f at $%.2f an hour)", super.getName(), calculatePay(), hours, rate);
+        return String.format("\n%s is paid $%.2f. (%.2f hours at $%.2f an hour)", super.getName(), calculatePay(), hours, rate);
     }
 }

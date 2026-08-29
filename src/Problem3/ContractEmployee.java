@@ -17,7 +17,7 @@ public class ContractEmployee extends Employee implements Payable {
     // methods
     @Override
     public double calculatePay() {
-        return (fee);
+        return getFee();
     }
 
     @Override

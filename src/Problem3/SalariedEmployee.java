@@ -17,11 +17,11 @@ public class SalariedEmployee extends Employee implements Payable {
     // methods
     @Override
     public double calculatePay() {
-        return (salary / 12);
+        return (salary * 12);
     }
 
     @Override
     public String getPayDetails() {
-        return String.format("\n%s is paid $%.2f monthly. ($%.2f / 12)", super.getName(), calculatePay(), salary);
+        return String.format("\n%s is paid $%.2f monthly. ($%.2f / 12)", super.getName(), salary, calculatePay());
     }
 }
